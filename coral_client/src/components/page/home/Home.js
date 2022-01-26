@@ -9,16 +9,6 @@ import { homeCorals } from '../../../share/data'
 import HomeCoralView from '../../../common/HomeCoralView'
 import { CloudUploadOutlined } from '@ant-design/icons/lib/icons'
 
-
-const UploadBtn = styled(Button)`
-    height: 120px; 
-    width: 120px;
-    border-radius: 50%;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-`
 const Wrapper = styled.div`
     display: flex;
     flex-flow: column nowrap;
@@ -53,6 +43,23 @@ const Nav = styled.div`
         align-items: center;
     }
 `
+const Bottom = styled.div`
+    background-image: url(${bottomBg});
+    background-size: cover;
+    height: 20vh;
+    width: 100vw;
+`
+const UploadBtn = styled(Button)`
+    height: 120px; 
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+`
+
+/* Body style*/
 const Body = styled.div`
     height: 60vh;
     width: 100vw;
@@ -62,12 +69,6 @@ const DataView = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-`
-const Bottom = styled.div`
-    background-image: url(${bottomBg});
-    background-size: cover;
-    height: 20vh;
-    width: 100vw;
 `
 export default function Home() {
     const { navigation } = useContext(AppContext)

@@ -42,6 +42,14 @@ const Nav = styled.div`
         align-items: center;
     }
 `
+const Bottom = styled.div`
+    background-image: url(${bottomBg});
+    background-size: cover;
+    height: 20vh;
+    width: 100vw;
+`
+
+/* Body style*/
 const Body = styled.div`
     height: 60vh;
     width: 100vw;
@@ -51,12 +59,6 @@ const DataView = styled.div`
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-`
-const Bottom = styled.div`
-    background-image: url(${bottomBg});
-    background-size: cover;
-    height: 20vh;
-    width: 100vw;
 `
 export default function Response() {
     const { navigation } = useContext(AppContext)

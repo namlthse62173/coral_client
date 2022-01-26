@@ -56,7 +56,8 @@ const Bottom = styled.div`
     height: 20vh;
     width: 100vw;
 `
-//
+
+/* Body style*/
 const View = styled.div`
     position: absolute;
     left: 50%;
@@ -71,7 +72,7 @@ const View = styled.div`
         text-align: center;
         color: ${globalBlue};
     }
-    .sendBtn {
+    .fbBtn {
         margin-top: 10px;
         text-align: end;
     }
@@ -155,14 +156,14 @@ export default function Feedback() {
                             </Form.Item>
                         </FormStyled>
                     </div>
-                    <div className='sendBtn'>
+                    <div className='fbBtn'>
                         <Button style={{ ...btnCss, height: 30, borderRadius: 30, width: 100 }}>
                             Send
                         </Button>
                     </div>
                 </View>
             </Body>
-            <Bottom></Bottom>
+            <Bottom />
         </Wrapper>
     )
 }
