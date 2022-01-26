@@ -6,7 +6,7 @@ import { Button, Col, Row } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { homeCorals } from '../../../share/data'
-import CoralView from '../../../common/CoralView'
+import HomeCoralView from '../../../common/HomeCoralView'
 import { CloudUploadOutlined } from '@ant-design/icons/lib/icons'
 
 
@@ -112,7 +112,7 @@ export default function Home() {
                     <Row>
                         {
                             homeCorals.map(c => (
-                                <Col span={4}><CoralView name={c.name} imageSrc={c.src} /></Col>
+                                <Col span={4}><HomeCoralView name={c.name} imageSrc={c.src} /></Col>
                             ))
                         }
                     </Row>

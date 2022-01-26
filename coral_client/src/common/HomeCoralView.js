@@ -17,7 +17,7 @@ const Wrapper = styled.div`
         color: ${globalBlue};
     }
 `
-export default function CoralView({ name, imageSrc }) {
+export default function HomeCoralView({ name, imageSrc }) {
     return (
         <Wrapper>
             <div className='card'>
