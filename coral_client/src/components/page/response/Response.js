@@ -2,11 +2,10 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import topBg from '../../../share/background/top-background.jpg'
 import bottomBg from '../../../share/background/bottom-background.jpg'
-import { Button, Col, Row } from 'antd'
+import { Button } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { responseCorals } from '../../../share/data'
-import { CloudUploadOutlined } from '@ant-design/icons/lib/icons'
 import ResponseCoralView from '../../../common/ResponseCoralView'
 
 const Wrapper = styled.div`
@@ -81,7 +80,7 @@ export default function Response() {
                         </Button>
                         <Button
                             style={{ ...btnCss, marginLeft: '5px' }}
-                            onClick={() => navigation('/')}
+                            onClick={() => navigation('/feedback')}
                         >
                             Feedback
                         </Button>
