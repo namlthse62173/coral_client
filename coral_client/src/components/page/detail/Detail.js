@@ -1,46 +1,12 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import topBg from '../../../share/background/top-background.jpg'
-import bottomBg from '../../../share/background/bottom-background.jpg'
-import { Button } from 'antd'
+import { Button, Input } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { detailCoral } from '../../../share/data'
+import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../../css-objects'
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100vh;
-    width: 100vw;
-`
-const Top = styled.div`
-    background-image: url(${topBg});
-    background-size: cover;
-    height: 20vh;
-    width: 100vw;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-`
-const Nav = styled.div`
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-    height: 30px;
-    background-color: #483D8B;
-
-    .flexStart {
-        display: flex;
-        align-items: center;
-    }
-    .flexEnd {
-        display: flex;
-        align-items: center;
-    }
-`
+/* Body style */
 const Body = styled.div`
     height: 60vh;
     width: 100vw;
@@ -48,14 +14,6 @@ const Body = styled.div`
 
     position: relative;
 `
-const Bottom = styled.div`
-    background-image: url(${bottomBg});
-    background-size: cover;
-    height: 20vh;
-    width: 100vw;
-`
-
-/* Body style */
 const View = styled.div`
     position: absolute;
     left: 50%;
@@ -100,9 +58,13 @@ export default function Detail() {
     const imageSrc = detailCoral.src
     const desc = detailCoral.description
     return (
-        <Wrapper>
-            <Top>
-                <Nav>
+        <HomeWrapper>
+            <HomeTop>
+                <HomeSearchText>
+                    <Input style={{ width: 200 }} placeholder='Search' />
+                    <Button style={{ backgroundColor: '#9ACD32', fontWeight: 'bold' }}>GO</Button>
+                </HomeSearchText>
+                <HomeNav>
                     <div className='flexStart'>
                         <Button
                             style={{ ...btnCss, marginLeft: '5px' }}
@@ -132,24 +94,24 @@ export default function Detail() {
                             Hoàng Nam
                         </Button>
                     </div>
-                </Nav>
-            </Top>
+                </HomeNav>
+            </HomeTop>
             <Body>
                 <View>
                     <div className='detailTable'>
-                        <img src={imageSrc} style={{ height: '250px', width: '250px' }}/>
+                        <img src={imageSrc} style={{ height: '250px', width: '250px' }} />
                         <div className='detailTable__desc'>
                             <p>{desc}</p>
                         </div>
                     </div>
                     <div className='detailBtn'>
-                        <Button 
+                        <Button
                             style={{ ...btnCss, height: 30, borderRadius: 30, width: 100 }}
-                            onClick={() => navigation('/')}    
+                            onClick={() => navigation('/')}
                         >
                             Back
                         </Button>
-                        <Button 
+                        <Button
                             style={{ ...btnCss, height: 30, borderRadius: 30, width: 100, marginLeft: 20 }}
                             onClick={() => navigation('/feedback')}
                         >
@@ -158,7 +120,7 @@ export default function Detail() {
                     </div>
                 </View>
             </Body>
-            <Bottom />
-        </Wrapper>
+            <HomeBottom />
+        </HomeWrapper>
     )
 }

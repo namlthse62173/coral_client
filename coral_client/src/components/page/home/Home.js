@@ -1,54 +1,13 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import topBg from '../../../share/background/top-background.jpg'
-import bottomBg from '../../../share/background/bottom-background.jpg'
-import { Button, Col, Row } from 'antd'
+import { Button, Col, Input, Row } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { homeCorals } from '../../../share/data'
 import HomeCoralView from '../../../common/HomeCoralView'
 import { CloudUploadOutlined } from '@ant-design/icons/lib/icons'
+import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../../css-objects'
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100vh;
-    width: 100vw;
-`
-const Top = styled.div`
-    background-image: url(${topBg});
-    background-size: cover;
-    height: 20vh;
-    width: 100vw;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-`
-const Nav = styled.div`
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-    height: 30px;
-    background-color: #483D8B;
-
-    .flexStart {
-        display: flex;
-        align-items: center;
-    }
-    .flexEnd {
-        display: flex;
-        align-items: center;
-    }
-`
-const Bottom = styled.div`
-    background-image: url(${bottomBg});
-    background-size: cover;
-    height: 20vh;
-    width: 100vw;
-`
 const UploadBtn = styled(Button)`
     height: 120px; 
     width: 120px;
@@ -73,10 +32,14 @@ const DataView = styled.div`
 export default function Home() {
     const { navigation } = useContext(AppContext)
     return (
-        <Wrapper>
-            <Top>
+        <HomeWrapper>
+            <HomeTop>
                 <UploadBtn><CloudUploadOutlined style={{ fontSize: 70 }} /></UploadBtn>
-                <Nav>
+                <HomeSearchText>
+                    <Input style={{ width: 200 }} placeholder='Search'/>
+                    <Button style={{ backgroundColor: '#9ACD32', fontWeight: 'bold' }}>GO</Button>
+                </HomeSearchText>
+                <HomeNav>
                     <div className='flexStart'>
                         <Button
                             style={{ ...btnCss, marginLeft: '5px' }}
@@ -106,8 +69,8 @@ export default function Home() {
                             Login
                         </Button>
                     </div>
-                </Nav>
-            </Top>
+                </HomeNav>
+            </HomeTop>
             <Body>
                 <DataView>
                     <Row>
@@ -119,7 +82,7 @@ export default function Home() {
                     </Row>
                 </DataView>
             </Body>
-            <Bottom></Bottom>
-        </Wrapper>
+            <HomeBottom/>
+        </HomeWrapper>
     )
 }

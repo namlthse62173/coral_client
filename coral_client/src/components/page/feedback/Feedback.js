@@ -6,43 +6,11 @@ import { Button, Form, Input } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss, globalBlue } from '../../css-objects'
 import { CloudUploadOutlined } from '@ant-design/icons/lib/icons'
+import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../../css-objects'
 
 const { TextArea } = Input
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100vh;
-    width: 100vw;
-`
-const Top = styled.div`
-    background-image: url(${topBg});
-    background-size: cover;
-    height: 20vh;
-    width: 100vw;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-`
-const Nav = styled.div`
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-    height: 30px;
-    background-color: #483D8B;
-
-    .flexStart {
-        display: flex;
-        align-items: center;
-    }
-    .flexEnd {
-        display: flex;
-        align-items: center;
-    }
-`
+/* Body style*/
 const Body = styled.div`
     height: 60vh;
     width: 100vw;
@@ -50,14 +18,6 @@ const Body = styled.div`
 
     position: relative;
 `
-const Bottom = styled.div`
-    background-image: url(${bottomBg});
-    background-size: cover;
-    height: 20vh;
-    width: 100vw;
-`
-
-/* Body style*/
 const View = styled.div`
     position: absolute;
     left: 50%;
@@ -96,9 +56,13 @@ export default function Feedback() {
     const { navigation } = useContext(AppContext)
 
     return (
-        <Wrapper>
-            <Top>
-                <Nav>
+        <HomeWrapper>
+            <HomeTop>
+                <HomeSearchText>
+                    <Input style={{ width: 200 }} placeholder='Search' />
+                    <Button style={{ backgroundColor: '#9ACD32', fontWeight: 'bold' }}>GO</Button>
+                </HomeSearchText>
+                <HomeNav>
                     <div className='flexStart'>
                         <Button
                             style={{ ...btnCss, marginLeft: '5px' }}
@@ -128,8 +92,8 @@ export default function Feedback() {
                             Hoàng Nam
                         </Button>
                     </div>
-                </Nav>
-            </Top>
+                </HomeNav>
+            </HomeTop>
             <Body>
                 <View>
                     <h1>Feedback</h1>
@@ -163,7 +127,7 @@ export default function Feedback() {
                     </div>
                 </View>
             </Body>
-            <Bottom />
-        </Wrapper>
+            <HomeBottom />
+        </HomeWrapper>
     )
 }
