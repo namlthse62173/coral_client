@@ -4,16 +4,16 @@ import { Button, Col, Input, Row } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { homeCorals } from '../../../share/data'
-import HomeCoralView from '../../../common/HomeCoralView'
+import HomeCoralView from '../../common/HomeCoralView'
 import { CloudUploadOutlined } from '@ant-design/icons/lib/icons'
 import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../../css-objects'
 
 const UploadBtn = styled(Button)`
-    height: 120px; 
-    width: 120px;
+    height: 100px; 
+    width: 100px;
     border-radius: 50%;
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 `
@@ -34,7 +34,7 @@ export default function Home() {
     return (
         <HomeWrapper>
             <HomeTop>
-                <UploadBtn><CloudUploadOutlined style={{ fontSize: 70 }} /></UploadBtn>
+                <UploadBtn><CloudUploadOutlined style={{ fontSize: 60 }} /></UploadBtn>
                 <HomeSearchText>
                     <Input style={{ width: 200 }} placeholder='Search'/>
                     <Button style={{ backgroundColor: '#9ACD32', fontWeight: 'bold' }}>GO</Button>

@@ -31,7 +31,7 @@ const Wrapper = styled.div`
     .card .coralText .coralDesc {
         display: inline;
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
     }
 `
 export default function ResponseCoralView({ id, name, imageSrc, desc }) {

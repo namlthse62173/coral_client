@@ -7,6 +7,7 @@ import Feedback from './components/page/feedback/Feedback';
 import Login from './components/page/login/Login';
 import Register from './components/page/register/Register';
 import AppProvider from './components/provider/AppProvider';
+import AdminBase from './components/page-admin/AdminBase';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/feedback' element={<Feedback />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/admin' element={<AdminBase />} />
       </Routes>
     </AppProvider>
   );

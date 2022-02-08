@@ -4,8 +4,8 @@ import { Button, Input } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { responseCorals } from '../../../share/data'
-import ResponseCoralView from '../../../common/ResponseCoralView'
 import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../../css-objects'
+import ResponseCoralView from '../../common/ResponseCoralView'
 
 /* Body style*/
 const Body = styled.div`

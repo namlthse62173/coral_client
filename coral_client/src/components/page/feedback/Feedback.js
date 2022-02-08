@@ -111,7 +111,7 @@ export default function Feedback() {
                             <Form.Item
                                 label='Detail' name='detail'
                             >
-                                <TextArea rows={6} />
+                                <TextArea rows={4} />
                             </Form.Item>
                             <Form.Item wrapperCol={{ offset: 4, span: 20 }}>
                                 <UploadBtn>
