@@ -53,6 +53,6 @@ export const HomeSearchText = styled.div`
 export const HomeBottom = styled.div`
     background-image: url(${bottomBg});
     background-size: cover;
-    height: 20vh;
+    height: 15vh;
     width: 100vw;
 `

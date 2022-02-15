@@ -61,7 +61,7 @@ export default function AdminBase() {
             <b className='username'>Admin manager</b>
           </UserLogin>
           <MainMenu onClick={() => setWikiClicked(wikiClicked => !wikiClicked)}>
-            Wiki {wikiClicked ? <UpOutlined style={{ fontSize: 10 }} /> : <DownOutlined style={{ fontSize: 10 }} />}
+            Factsheet {wikiClicked ? <UpOutlined style={{ fontSize: 10 }} /> : <DownOutlined style={{ fontSize: 10 }} />}
           </MainMenu>
           <SubMenu active={wikiClicked}>Add</SubMenu>
           <SubMenu active={wikiClicked}>Management</SubMenu>

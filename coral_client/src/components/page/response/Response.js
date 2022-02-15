@@ -9,7 +9,7 @@ import ResponseCoralView from '../../common/ResponseCoralView'
 
 /* Body style*/
 const Body = styled.div`
-    height: 60vh;
+    height: 65vh;
     width: 100vw;
     overflow-y: scroll;
 `

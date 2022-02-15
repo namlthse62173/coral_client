@@ -8,7 +8,7 @@ import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../..
 
 /* Body style */
 const Body = styled.div`
-    height: 60vh;
+    height: 65vh;
     width: 100vw;
     overflow-y: scroll;
 

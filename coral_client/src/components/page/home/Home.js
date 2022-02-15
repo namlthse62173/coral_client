@@ -20,7 +20,7 @@ const UploadBtn = styled(Button)`
 
 /* Body style*/
 const Body = styled.div`
-    height: 60vh;
+    height: 65vh;
     width: 100vw;
     overflow-y: scroll;
 `
