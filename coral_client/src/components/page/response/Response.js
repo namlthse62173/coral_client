@@ -9,7 +9,7 @@ import ResponseCoralView from '../../common/ResponseCoralView'
 
 /* Body style*/
 const Body = styled.div`
-    height: 65vh;
+    height: 75vh;
     width: 100vw;
     overflow-y: scroll;
 `
@@ -75,7 +75,6 @@ export default function Response() {
                     }
                 </DataView>
             </Body>
-            <HomeBottom />
         </HomeWrapper>
     )
 }

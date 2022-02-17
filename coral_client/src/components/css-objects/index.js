@@ -20,7 +20,7 @@ export const HomeWrapper = styled.div`
 export const HomeTop = styled.div`
     background-image: url(${topBg});
     background-size: cover;
-    height: 20vh;
+    height: 25vh;
     width: 100vw;
     position: relative;
 

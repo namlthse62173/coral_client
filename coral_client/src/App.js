@@ -8,6 +8,7 @@ import Login from './components/page/login/Login';
 import Register from './components/page/register/Register';
 import AppProvider from './components/provider/AppProvider';
 import AdminBase from './components/page-admin/AdminBase';
+import UserInfo from './components/page/userinfo/UserInfo';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/admin' element={<AdminBase />} />
+        <Route path='/info' element={<UserInfo />} />
       </Routes>
     </AppProvider>
   );

@@ -20,7 +20,7 @@ const UploadBtn = styled(Button)`
 
 /* Body style*/
 const Body = styled.div`
-    height: 65vh;
+    height: 75vh;
     width: 100vw;
     overflow-y: scroll;
 `
@@ -82,7 +82,6 @@ export default function Home() {
                     </Row>
                 </DataView>
             </Body>
-            <HomeBottom/>
         </HomeWrapper>
     )
 }

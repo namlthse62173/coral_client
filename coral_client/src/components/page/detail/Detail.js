@@ -8,7 +8,7 @@ import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../..
 
 /* Body style */
 const Body = styled.div`
-    height: 65vh;
+    height: 75vh;
     width: 100vw;
     overflow-y: scroll;
 
@@ -120,7 +120,6 @@ export default function Detail() {
                     </div>
                 </View>
             </Body>
-            <HomeBottom />
         </HomeWrapper>
     )
 }
