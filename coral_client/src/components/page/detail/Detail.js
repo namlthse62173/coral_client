@@ -78,7 +78,7 @@ export default function Detail() {
                     <div className='flexEnd'>
                         <Button
                             style={{ ...btnCss, marginRight: '5px' }}
-                            onClick={() => navigation('/')}
+                            onClick={() => navigation('/info')}
                         >
                             Hoàng Nam
                         </Button>

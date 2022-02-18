@@ -82,7 +82,7 @@ export default function Feedback() {
 					<div className="flexEnd">
 						<Button
 							style={{ ...btnCss, marginRight: "5px" }}
-							onClick={() => navigation("/")}
+							onClick={() => navigation("/info")}
 						>
 							Hoàng Nam
 						</Button>
