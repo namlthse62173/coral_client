@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { Button, Input } from 'antd'
+import { Button } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { responseCorals } from '../../../share/data'
-import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../../css-objects'
+import { HomeWrapper, HomeTop, HomeNav } from '../../css-objects'
 import ResponseCoralView from '../../common/ResponseCoralView'
+import { thumbnail } from '../../../share/data'
 
 /* Body style*/
 const Body = styled.div`
@@ -13,7 +14,21 @@ const Body = styled.div`
     width: 100vw;
     overflow-y: scroll;
 `
+const ThumbnailImg = styled.div`
+    height: 150px; 
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+
+    img {
+        height: 100%;
+    }
+`
 const DataView = styled.div`
+    width: 99vw;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -24,10 +39,7 @@ export default function Response() {
     return (
         <HomeWrapper>
             <HomeTop>
-                <HomeSearchText>
-                    <Input style={{ width: 200 }} placeholder='Search' />
-                    <Button style={{ backgroundColor: '#9ACD32', fontWeight: 'bold' }}>GO</Button>
-                </HomeSearchText>
+                <ThumbnailImg><img src={thumbnail.src}/></ThumbnailImg>
                 <HomeNav>
                     <div className='flexStart'>
                         <Button
@@ -53,7 +65,7 @@ export default function Response() {
                     <div className='flexEnd'>
                         <Button
                             style={{ ...btnCss, marginRight: '5px' }}
-                            onClick={() => navigation('/')}
+                            onClick={() => navigation('/info')}
                         >
                             Hoàng Nam
                         </Button>

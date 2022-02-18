@@ -3,14 +3,7 @@ import styled from "styled-components";
 import { Button, Form, Input } from "antd";
 import { AppContext } from "../../provider/AppProvider";
 import { btnCss, globalBlue } from "../../css-objects";
-import {
-    HomeWrapper,
-    HomeTop,
-    HomeNav,
-    HomeSearchText,
-} from "../../css-objects";
-
-const { TextArea } = Input;
+import { HomeWrapper, HomeTop, HomeNav } from "../../css-objects";
 
 /* Body style*/
 const Body = styled.div`
@@ -69,12 +62,6 @@ export default function Feedback() {
     return (
         <HomeWrapper>
             <HomeTop>
-                <HomeSearchText>
-                    <Input style={{ width: 200 }} placeholder="Search" />
-                    <Button style={{ backgroundColor: "#9ACD32", fontWeight: "bold" }}>
-                        GO
-                    </Button>
-                </HomeSearchText>
                 <HomeNav>
                     <div className="flexStart">
                         <Button
@@ -109,7 +96,7 @@ export default function Feedback() {
             </HomeTop>
             <Body>
                 <View>
-                    <h1>Feedback</h1>
+                    <h1>MY INFORMATION</h1>
                     <div className="fbTable">
                         <FormStyled
                             layout="horizontal"
@@ -146,7 +133,7 @@ export default function Feedback() {
                     </div>
                     <div className="fbBtn">
                         <Button
-                            style={{ ...btnCss, height: 30, borderRadius: 30, width: 100 }}
+                            style={{ ...btnCss, height: 30, borderRadius: 10, width: 100 }}
                         >
                             Save
                         </Button>

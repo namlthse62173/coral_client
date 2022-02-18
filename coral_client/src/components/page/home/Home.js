@@ -1,21 +1,21 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { Button, Col, Input, Row } from 'antd'
+import { Button, Col, Row } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { homeCorals } from '../../../share/data'
 import HomeCoralView from '../../common/HomeCoralView'
 import { CloudUploadOutlined } from '@ant-design/icons/lib/icons'
-import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../../css-objects'
+import { HomeWrapper, HomeTop, HomeNav } from '../../css-objects'
 
 const UploadBtn = styled(Button)`
-    height: 100px; 
-    width: 100px;
+    height: 120px; 
+    width: 120px;
     border-radius: 50%;
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
 `
 
 /* Body style*/
@@ -35,10 +35,6 @@ export default function Home() {
         <HomeWrapper>
             <HomeTop>
                 <UploadBtn><CloudUploadOutlined style={{ fontSize: 60 }} /></UploadBtn>
-                <HomeSearchText>
-                    <Input style={{ width: 200 }} placeholder='Search'/>
-                    <Button style={{ backgroundColor: '#9ACD32', fontWeight: 'bold' }}>GO</Button>
-                </HomeSearchText>
                 <HomeNav>
                     <div className='flexStart'>
                         <Button

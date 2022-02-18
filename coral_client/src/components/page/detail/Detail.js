@@ -1,56 +1,49 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { Button, Input } from 'antd'
+import { Button } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { detailCoral } from '../../../share/data'
-import { HomeWrapper, HomeTop, HomeNav, HomeSearchText, HomeBottom } from '../../css-objects'
+import { HomeWrapper, HomeTop, HomeNav } from '../../css-objects'
 
 /* Body style */
 const Body = styled.div`
     height: 75vh;
     width: 100vw;
-    overflow-y: scroll;
-
-    position: relative;
 `
 const View = styled.div`
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translate(-50%, 15%);
     width: 80%;
     height: 70%;
 
-    .detailTable {
-        background-color: #D3D3D3;
-        height: 100%;
-        width: 100%;
-        text-align: end;
+    .detail__table {
+        position: relative;
+        border-radius: 10px;
+        background-color: #d3d3d3;
     }
-
-    .detailTable img {
-        position: absolute;
-        border-radius: 30px;
-        top: -10px;
-        left: -30px;
-    }
-
-    .detailTable .detailTable__desc {
-        display: inline-block;
-        width: 80%;
-        text-align: start;
-        margin: 20px 10px 20px 10px;
-    }
-
-    .detailTable .detailTable__desc p {
-        display: inline-block;
-        width: 100%;
+    .detail__table p {
         font-size: 20px;
+        text-align: justify;
+        left: -10px;
+        padding: 20px;
+        margin: 0;
     }
-
-    .detailBtn {
+    .detail__table img {
+        height: 250px;
+        width: 270px;
+        float: left;
+        border-radius: 20px;
+        left: -20px;
+        top: -20px;
+        position: relative;
+    }
+    .detail__btn {
+        float: right;
+        bottom: -50px;
+        right: 0;
         margin-top: 10px;
-        text-align: end;
     }
 `
 export default function Detail() {
@@ -60,10 +53,6 @@ export default function Detail() {
     return (
         <HomeWrapper>
             <HomeTop>
-                <HomeSearchText>
-                    <Input style={{ width: 200 }} placeholder='Search' />
-                    <Button style={{ backgroundColor: '#9ACD32', fontWeight: 'bold' }}>GO</Button>
-                </HomeSearchText>
                 <HomeNav>
                     <div className='flexStart'>
                         <Button
@@ -98,21 +87,19 @@ export default function Detail() {
             </HomeTop>
             <Body>
                 <View>
-                    <div className='detailTable'>
-                        <img src={imageSrc} style={{ height: '250px', width: '250px' }} />
-                        <div className='detailTable__desc'>
-                            <p>{desc}</p>
-                        </div>
+                    <div className='detail__table'>
+                        <img src={imageSrc} />
+                        <p>{desc}</p>
                     </div>
-                    <div className='detailBtn'>
+                    <div className='detail__btn'>
                         <Button
-                            style={{ ...btnCss, height: 30, borderRadius: 30, width: 100 }}
+                            style={{ ...btnCss, height: 30, borderRadius: 10, width: 100 }}
                             onClick={() => navigation('/')}
                         >
                             Back
                         </Button>
                         <Button
-                            style={{ ...btnCss, height: 30, borderRadius: 30, width: 100, marginLeft: 20 }}
+                            style={{ ...btnCss, height: 30, borderRadius: 10, width: 100, marginLeft: 20 }}
                             onClick={() => navigation('/feedback')}
                         >
                             Feedback

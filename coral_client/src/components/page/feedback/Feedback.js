@@ -4,12 +4,7 @@ import { Button, Form, Input } from "antd";
 import { AppContext } from "../../provider/AppProvider";
 import { btnCss, globalBlue } from "../../css-objects";
 import { CloudUploadOutlined } from "@ant-design/icons/lib/icons";
-import {
-	HomeWrapper,
-	HomeTop,
-	HomeNav,
-	HomeSearchText,
-} from "../../css-objects";
+import { HomeWrapper, HomeTop, HomeNav } from "../../css-objects";
 
 const { TextArea } = Input;
 
@@ -62,12 +57,6 @@ export default function Feedback() {
 	return (
 		<HomeWrapper>
 			<HomeTop>
-				<HomeSearchText>
-					<Input style={{ width: 200 }} placeholder="Search" />
-					<Button style={{ backgroundColor: "#9ACD32", fontWeight: "bold" }}>
-						GO
-					</Button>
-				</HomeSearchText>
 				<HomeNav>
 					<div className="flexStart">
 						<Button
@@ -128,7 +117,7 @@ export default function Feedback() {
 					</div>
 					<div className="fbBtn">
 						<Button
-							style={{ ...btnCss, height: 30, borderRadius: 30, width: 100 }}
+							style={{ ...btnCss, height: 30, borderRadius: 10, width: 100 }}
 						>
 							Send
 						</Button>
