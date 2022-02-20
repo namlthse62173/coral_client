@@ -1,9 +1,10 @@
-import React, { useContext, useEffect } from "react";
-import styled from "styled-components";
-import { Button, Form, Input } from "antd";
-import { AppContext } from "../../provider/AppProvider";
-import { btnCss, globalBlue } from "../../css-objects";
-import { HomeWrapper, HomeTop, HomeNav } from "../../css-objects";
+import React, { useContext, useEffect } from "react"
+import styled from "styled-components"
+import { Button, Form, Input } from "antd"
+import { AppContext } from "../../provider/AppProvider"
+import { btnCss, globalBlue } from "../../css-objects"
+import { HomeWrapper, HomeTop, HomeNav } from "../../css-objects"
+import { FeedbackButton, HomeButton, InfoButton, StatisticButton } from '../../common/NavButton'
 
 /* Body style*/
 const Body = styled.div`
@@ -12,7 +13,7 @@ const Body = styled.div`
     overflow-y: scroll;
 
     position: relative;
-`;
+`
 const View = styled.div`
     position: absolute;
     left: 50%;
@@ -32,7 +33,7 @@ const View = styled.div`
         margin-top: 10px;
         text-align: end;
     }
-`;
+`
 const FormStyled = styled(Form)`
     padding: 20px 50px;
     .ant-row .ant-form-item-label{
@@ -43,7 +44,7 @@ const FormStyled = styled(Form)`
         font-weight: bold;
         font-size: 20px;
     }
-`;
+`
 
 export default function Feedback() {
     const { navigation } = useContext(AppContext);
@@ -58,39 +59,19 @@ export default function Feedback() {
             address: '335 Hoàng Sa'
         })
     }, [])
-    
+
     return (
         <HomeWrapper>
             <HomeTop>
                 <HomeNav>
-                    <div className="flexStart">
-                        <Button
-                            style={{ ...btnCss, marginLeft: "5px" }}
-                            onClick={() => navigation("/")}
-                        >
-                            Home
-                        </Button>
-                        <Button
-                            style={{ ...btnCss, marginLeft: "5px" }}
-                            onClick={() => navigation("/")}
-                        >
-                            Statistic
-                        </Button>
-                        <Button
-                            style={{ ...btnCss, marginLeft: "5px" }}
-                            onClick={() => navigation("/feedback")}
-                        >
-                            Feedback
-                        </Button>
+                    <div className='flexStart'>
+                        <HomeButton nav={navigation} />
+                        <StatisticButton nav={navigation} />
+                        <FeedbackButton nav={navigation} />
                     </div>
 
-                    <div className="flexEnd">
-                        <Button
-                            style={{ ...btnCss, marginRight: "5px" }}
-                            onClick={() => navigation("/info")}
-                        >
-                            Hoàng Nam
-                        </Button>
+                    <div className='flexEnd'>
+                        <InfoButton nav={navigation} />
                     </div>
                 </HomeNav>
             </HomeTop>
@@ -141,5 +122,5 @@ export default function Feedback() {
                 </View>
             </Body>
         </HomeWrapper>
-    );
+    )
 }

@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { Button } from 'antd'
 import { AppContext } from '../../provider/AppProvider'
-import { btnCss } from '../../css-objects'
 import { responseCorals } from '../../../share/data'
 import { HomeWrapper, HomeTop, HomeNav } from '../../css-objects'
 import ResponseCoralView from '../../common/ResponseCoralView'
 import { thumbnail } from '../../../share/data'
+import { FeedbackButton, HomeButton, InfoButton, StatisticButton } from '../../common/NavButton'
 
 /* Body style*/
 const Body = styled.div`
@@ -33,42 +32,23 @@ const DataView = styled.div`
     flex-flow: column nowrap;
     align-items: center;
 `
+
 export default function Response() {
     const { navigation } = useContext(AppContext)
 
     return (
         <HomeWrapper>
             <HomeTop>
-                <ThumbnailImg><img src={thumbnail.src}/></ThumbnailImg>
+                <ThumbnailImg><img src={thumbnail.src} /></ThumbnailImg>
                 <HomeNav>
                     <div className='flexStart'>
-                        <Button
-                            style={{ ...btnCss, marginLeft: '5px' }}
-                            onClick={() => navigation('/')}
-                        >
-                            Home
-                        </Button>
-                        <Button
-                            style={{ ...btnCss, marginLeft: '5px' }}
-                            onClick={() => navigation('/')}
-                        >
-                            Statistic
-                        </Button>
-                        <Button
-                            style={{ ...btnCss, marginLeft: '5px' }}
-                            onClick={() => navigation('/feedback')}
-                        >
-                            Feedback
-                        </Button>
+                        <HomeButton nav={navigation} />
+                        <StatisticButton nav={navigation} />
+                        <FeedbackButton nav={navigation} />
                     </div>
 
                     <div className='flexEnd'>
-                        <Button
-                            style={{ ...btnCss, marginRight: '5px' }}
-                            onClick={() => navigation('/info')}
-                        >
-                            Hoàng Nam
-                        </Button>
+                        <InfoButton nav={navigation} />
                     </div>
                 </HomeNav>
             </HomeTop>

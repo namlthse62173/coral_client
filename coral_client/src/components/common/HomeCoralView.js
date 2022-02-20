@@ -15,6 +15,7 @@ const Wrapper = styled.div`
         font-size: 15px;
         text-decoration: underline;
         color: ${globalBlue};
+        bottom: -20px;
     }
 `
 export default function HomeCoralView({ name, imageSrc }) {

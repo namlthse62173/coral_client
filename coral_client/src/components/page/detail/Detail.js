@@ -5,6 +5,7 @@ import { AppContext } from '../../provider/AppProvider'
 import { btnCss } from '../../css-objects'
 import { detailCoral } from '../../../share/data'
 import { HomeWrapper, HomeTop, HomeNav } from '../../css-objects'
+import { FeedbackButton, HomeButton, InfoButton, StatisticButton } from '../../common/NavButton'
 
 /* Body style */
 const Body = styled.div`
@@ -29,6 +30,7 @@ const View = styled.div`
         left: -10px;
         padding: 20px;
         margin: 0;
+        min-height: 270px;
     }
     .detail__table img {
         height: 250px;
@@ -46,6 +48,7 @@ const View = styled.div`
         margin-top: 10px;
     }
 `
+
 export default function Detail() {
     const { navigation } = useContext(AppContext)
     const imageSrc = detailCoral.src
@@ -55,33 +58,13 @@ export default function Detail() {
             <HomeTop>
                 <HomeNav>
                     <div className='flexStart'>
-                        <Button
-                            style={{ ...btnCss, marginLeft: '5px' }}
-                            onClick={() => navigation('/')}
-                        >
-                            Home
-                        </Button>
-                        <Button
-                            style={{ ...btnCss, marginLeft: '5px' }}
-                            onClick={() => navigation('/')}
-                        >
-                            Statistic
-                        </Button>
-                        <Button
-                            style={{ ...btnCss, marginLeft: '5px' }}
-                            onClick={() => navigation('/feedback')}
-                        >
-                            Feedback
-                        </Button>
+                        <HomeButton nav={navigation} />
+                        <StatisticButton nav={navigation} />
+                        <FeedbackButton nav={navigation} />
                     </div>
 
                     <div className='flexEnd'>
-                        <Button
-                            style={{ ...btnCss, marginRight: '5px' }}
-                            onClick={() => navigation('/info')}
-                        >
-                            Hoàng Nam
-                        </Button>
+                        <InfoButton nav={navigation} />
                     </div>
                 </HomeNav>
             </HomeTop>

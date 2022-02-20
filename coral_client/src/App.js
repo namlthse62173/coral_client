@@ -9,12 +9,13 @@ import Register from './components/page/register/Register';
 import AppProvider from './components/provider/AppProvider';
 import AdminBase from './components/page-admin/AdminBase';
 import UserInfo from './components/page/userinfo/UserInfo';
+import Statistic from './components/page/statistic/Statistic';
 
 function App() {
   return (
     <AppProvider>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Statistic />} />
         <Route path='/home' element={<Home />} />
         <Route path='/response' element={<Response />} />
         <Route path='/detail' element={<Detail />} />

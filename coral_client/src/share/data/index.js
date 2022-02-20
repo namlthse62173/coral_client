@@ -38,6 +38,18 @@ export const homeCorals = [
     {
         name: 'coral 10',
         src: 'https://i.ibb.co/DzGdWG5/Capture10.jpg'
+    },
+    {
+        name: 'coral 11',
+        src: 'https://i.ibb.co/DzGdWG5/Capture10.jpg'
+    },
+    {
+        name: 'coral 12',
+        src: 'https://i.ibb.co/DzGdWG5/Capture10.jpg'
+    },
+    {
+        name: 'coral 13',
+        src: 'https://i.ibb.co/DzGdWG5/Capture10.jpg'
     }
 ]
 
