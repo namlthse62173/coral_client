@@ -67,7 +67,7 @@ export default function AdminBase() {
           <SubMenu active={wikiClicked}>Management</SubMenu>
           <MainMenu>Statictis</MainMenu>
           <MainMenu onClick={() => setFbClicked(fbClicked => !fbClicked)}>
-            Feedback {fbClicked ? <UpOutlined style={{ fontSize: 10 }} /> : <DownOutlined style={{ fontSize: 10 }} />}  
+            Feedback {fbClicked ? <UpOutlined style={{ fontSize: 10 }} /> : <DownOutlined style={{ fontSize: 10 }} />}
           </MainMenu>
           <SubMenu active={fbClicked}>UnRead</SubMenu>
           <SubMenu active={fbClicked}>Read</SubMenu>
@@ -78,7 +78,7 @@ export default function AdminBase() {
       </Col>
       <Col span={18}>
         <RightBar>
-          <Header/>
+          <Header />
         </RightBar>
       </Col>
     </Row>

@@ -7,9 +7,10 @@ import Feedback from './components/page/feedback/Feedback';
 import Login from './components/page/login/Login';
 import Register from './components/page/register/Register';
 import AppProvider from './components/provider/AppProvider';
-import AdminBase from './components/page-admin/AdminBase';
+// import AdminBase from './components/page-admin/AdminBase';
 import UserInfo from './components/page/userinfo/UserInfo';
 import Statistic from './components/page/statistic/Statistic';
+import AdminBase from './components/page-admin/AdminPage';
 
 function App() {
   return (
